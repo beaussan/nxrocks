@@ -1,0 +1,13 @@
+npx nx g @nxrocks/nx-spring-boot:project --name=kbootapp --dependencies="web,jpa,h2,actuator,devtools" --artifactId=bootapp --directory=backend/bootapp --packageName=com.example.bootapp --keepProjectLevelWrapper=false --parentModuleName=boot-parent --transformIntoMultiModule=true --tags="type:api, type:java, type:backend" --projectNameAndRootFormat=as-provided --no-interactive
+
+npx nx generate @nxrocks/nx-spring-boot:project --name=bootlib --projectType=library --artifactId=bootlib --directory=backend/bootlib --packageName=com.example.bootlib --addToExistingParentModule=true --keepProjectLevelWrapper=false --parentModuleName=boot-parent --tags="type:api, type:java, type:backend" --projectNameAndRootFormat=as-provided --no-interactive
+
+
+npx nx g @nxrocks/nx-spring-boot:project --name=gbootapp --dependencies="web,jpa,h2,actuator,devtools" --buildSystem=gradle-project --artifactId=gbootapp --directory=backend/gbootapp --packageName=com.example.gbootapp --keepProjectLevelWrapper=false --parentModuleName=gboot-parent --transformIntoMultiModule=true --tags="type:api, type:java, type:backend" --projectNameAndRootFormat=as-provided --no-interactive
+
+npx nx generate @nxrocks/nx-spring-boot:project --name=gbootlib --projectType=library --artifactId=gbootlib --buildSystem=gradle-project --directory=backend/gbootlib --packageName=com.example.gbootlib --addToExistingParentModule=true --keepProjectLevelWrapper=false --parentModuleName=gboot-parent --tags="type:api, type:java, type:backend" --projectNameAndRootFormat=as-provided --no-interactive
+
+
+npx nx g @nxrocks/nx-spring-boot:project --name=kbootapp --dependencies="web,jpa,h2,actuator,devtools" --buildSystem=gradle-project-kotlin --artifactId=kbootapp --directory=backend/kbootapp --packageName=com.example.kbootapp --keepProjectLevelWrapper=false --parentModuleName=kboot-parent --transformIntoMultiModule=true --tags="type:api, type:java, type:backend" --projectNameAndRootFormat=as-provided --no-interactive
+
+npx nx generate @nxrocks/nx-spring-boot:project --name=kbootlib --projectType=library --buildSystem=gradle-project-kotlin --artifactId=kbootlib --directory=backend/kbootlib --packageName=com.example.kbootlib --addToExistingParentModule=true --keepProjectLevelWrapper=false --parentModuleName=kboot-parent --tags="type:api, type:java, type:backend" --projectNameAndRootFormat=as-provided --no-interactive

@@ -1,0 +1,10 @@
+{
+  "name": "kbootlib",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "backend/kboot-parent/kbootlib/src",
+  "tags": [
+    "type:api",
+    "type:java",
+    "type:backend"
+  ]
+}

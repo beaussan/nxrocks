@@ -1,0 +1,73 @@
+{
+  "name": "gbootapp",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "backend/gboot-parent/gbootapp/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nxrocks/nx-spring-boot:build",
+      "options": {
+        "root": "backend/gboot-parent/gbootapp",
+        "runFromParentModule": true
+      },
+      "dependsOn": ["^install"],
+      "outputs": ["{workspaceRoot}/backend/gboot-parent/gbootapp/build"]
+    },
+    "install": {
+      "executor": "@nxrocks/nx-spring-boot:install",
+      "options": {
+        "root": "backend/gboot-parent/gbootapp",
+        "runFromParentModule": true
+      },
+      "dependsOn": ["^install"],
+      "outputs": ["{workspaceRoot}/backend/gboot-parent/gbootapp/build"]
+    },
+    "test": {
+      "executor": "@nxrocks/nx-spring-boot:test",
+      "options": {
+        "root": "backend/gboot-parent/gbootapp",
+        "runFromParentModule": true
+      },
+      "outputs": ["{workspaceRoot}/backend/gboot-parent/gbootapp/build"]
+    },
+    "clean": {
+      "executor": "@nxrocks/nx-spring-boot:clean",
+      "options": {
+        "root": "backend/gboot-parent/gbootapp",
+        "runFromParentModule": true
+      }
+    },
+    "run": {
+      "executor": "@nxrocks/nx-spring-boot:run",
+      "options": {
+        "root": "backend/gboot-parent/gbootapp",
+        "runFromParentModule": true
+      },
+      "dependsOn": ["^install"]
+    },
+    "serve": {
+      "executor": "@nxrocks/nx-spring-boot:serve",
+      "options": {
+        "root": "backend/gboot-parent/gbootapp",
+        "runFromParentModule": true
+      },
+      "dependsOn": ["^install"]
+    },
+    "build-image": {
+      "executor": "@nxrocks/nx-spring-boot:build-image",
+      "options": {
+        "root": "backend/gboot-parent/gbootapp",
+        "runFromParentModule": true
+      },
+      "outputs": ["{workspaceRoot}/backend/gboot-parent/gbootapp/build"]
+    },
+    "build-info": {
+      "executor": "@nxrocks/nx-spring-boot:build-info",
+      "options": {
+        "root": "backend/gboot-parent/gbootapp",
+        "runFromParentModule": true
+      }
+    }
+  },
+  "tags": ["type:api", "type:java", "type:backend"]
+}

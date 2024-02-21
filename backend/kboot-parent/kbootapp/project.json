@@ -1,0 +1,10 @@
+{
+  "name": "kbootapp",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "backend/kboot-parent/kbootapp/src",
+  "tags": [
+    "type:api",
+    "type:java",
+    "type:backend"
+  ]
+}

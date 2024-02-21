@@ -1,0 +1,42 @@
+{
+  "name": "gbootlib",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "backend/gboot-parent/gbootlib/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nxrocks/nx-spring-boot:build",
+      "options": {
+        "root": "backend/gboot-parent/gbootlib",
+        "runFromParentModule": true
+      },
+      "dependsOn": ["^install"],
+      "outputs": ["{workspaceRoot}/backend/gboot-parent/gbootlib/build"]
+    },
+    "install": {
+      "executor": "@nxrocks/nx-spring-boot:install",
+      "options": {
+        "root": "backend/gboot-parent/gbootlib",
+        "runFromParentModule": true
+      },
+      "dependsOn": ["^install"],
+      "outputs": ["{workspaceRoot}/backend/gboot-parent/gbootlib/build"]
+    },
+    "test": {
+      "executor": "@nxrocks/nx-spring-boot:test",
+      "options": {
+        "root": "backend/gboot-parent/gbootlib",
+        "runFromParentModule": true
+      },
+      "outputs": ["{workspaceRoot}/backend/gboot-parent/gbootlib/build"]
+    },
+    "clean": {
+      "executor": "@nxrocks/nx-spring-boot:clean",
+      "options": {
+        "root": "backend/gboot-parent/gbootlib",
+        "runFromParentModule": true
+      }
+    }
+  },
+  "tags": ["type:api", "type:java", "type:backend"]
+}

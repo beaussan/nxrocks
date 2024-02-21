@@ -1,0 +1,8 @@
+{
+  "name": "gboot-parent",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "backend/gboot-parent",
+  "projectType": "application",
+  "targets": {},
+  "tags": ["type:api", "type:java", "type:backend"]
+}
